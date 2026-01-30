@@ -17,15 +17,15 @@ Each tool in this repository was built with specific live-operations constraints
 ## Project Overview
 
 ### 1. [Raspberry Pi Kiosk: Unattended Display Recovery](./raspberry-pi-kiosk)
-**The Challenge:** Maintaining 24/7 uptime for a headless digital signage node with zero on-site staff.
+**The Challenge:** Maintaining 24/7 uptime for a headless digital signage node with zero on-site staff. <br>
 **The Solution:** A self-healing Bash wrapper that manages X11 session locks, handles memory leaks via scheduled power cycles, and ensures deterministic recovery after power loss.
 
 ### 2. [Docker Shared Volumes: Solving Race Conditions](./docker-shared-volumes)
-**The Challenge:** Non-deterministic "Directory Not Found" errors during the concurrent startup of multiple game server containers.
+**The Challenge:** Non-deterministic "Directory Not Found" errors during the concurrent startup of multiple game server containers. <br>
 **The Solution:** Diagnosed an I/O race condition between asset ingest and tokenization processes. Implemented a "Read-Once, Write-Many" architecture with flattened directory structures to eliminate filesystem contention.
 
 ### 3. [Media Ingest Tooling: Operator-Controlled Encoding](./python-video-converter)
-**The Challenge:** Reducing the manual effort of standardizing video codecs for web playback without impacting the CPU performance of the live broadcast machine.
+**The Challenge:** Reducing the manual effort of standardizing video codecs for web playback without impacting the CPU performance of the live broadcast machine. <br>
 **The Solution:** A Python/FFmpeg wrapper that enforces VP9/WebM standards. Designed as an **operator-triggered** tool (rather than a background daemon) to ensure encoding never competes with live signal transmission.
 
 ---
